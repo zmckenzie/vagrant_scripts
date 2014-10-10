@@ -1,0 +1,13 @@
+#!/bin/bash   
+
+	VAGRANT_COMMAND=$1
+	VAGRANT_NAME=$2
+
+	if [ $# == 0 ]; then
+		vagrant global-status
+	elif [ $# == 1 ]; then
+		vagrant $VAGRANT_COMMAND
+	else
+		VAGRANT_ID=$(vagrant global-status | grep virtualbox | awk '{print $1, $2;}' | grep $VAGRANT_NAME | awk '{print $1;}')
+		vagrant $VAGRANT_COMMAND $VAGRANT_ID
+	fi

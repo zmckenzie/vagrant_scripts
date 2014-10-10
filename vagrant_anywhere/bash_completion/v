@@ -1,0 +1,6 @@
+_v()
+{
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    COMPREPLY=( $(compgen -W "`vagrant global-status | grep virtualbox | awk '{print $2;}'`" -- $cur) )
+}
+complete -F _v v
