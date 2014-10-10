@@ -8,7 +8,7 @@ Scripts I use with vagrant to make life easier
 
 Used to easily access vagrants from anywhere on a system.
 
-###Syntax
+###Usage
 Global status of all registered vagrant machines:
 ```bash
 v 
@@ -20,7 +20,7 @@ To run a vagrant command against a target machine:
 v [COMMAND] [NAME]
 ```
 
-###Usage
+###Installation
 
 Copy v script to user bin directory:
 ```bash 
